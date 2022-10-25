@@ -9,7 +9,6 @@ nav(:style="isDarkMode ? { backgroundColor: 'rgb(73,72,72)' } : null")
     label.switch
       input(type="checkbox" v-model="isDarkMode" @click="toggleDarkMode")
       span.slider.round
-| >
 </template>
 
 <style scoped>
