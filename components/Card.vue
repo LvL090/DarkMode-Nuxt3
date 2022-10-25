@@ -10,17 +10,13 @@ const { isDarkMode } = useDarkMode();
 const props = defineProps<CardProps>();
 </script>
 
-<template>
-  <div
-    class="card"
-    :style="isDarkMode ? { backgroundColor: 'black', color: 'white' } : null"
-  >
-    <img :src="card.img" alt="" />
-    <div class="content">
-      <h3>{{ card.title }}</h3>
-      <p>{{ card.author }}</p>
-    </div>
-  </div>
+<template lang="pug">
+.card(:style="isDarkMode ? { backgroundColor: 'black', color: 'white' } : null")
+  img(:src="card.img")
+  .content
+    h3 {{ card.title }}
+    p {{ card.author }}
+
 </template>
 
 <style scoped>

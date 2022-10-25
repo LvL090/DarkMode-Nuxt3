@@ -34,18 +34,12 @@ const cards = [
 ];
 </script>
 
-<template>
-  <div
-    class="container"
-    :style="isDarkMode ? { backgroundColor: 'rgb(73,72,72)' } : null"
-  >
-    <div class="content-container">
-      <h3 :style="isDarkMode ? { color: 'white' } : null">Reading List</h3>
-      <div class="cards-container">
-        <Card v-for="(card, index) in cards" :key="index" :card="card" />
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.container(:style="isDarkMode ? { backgroundColor: 'rgb(73,72,72)' } : null")
+  .content-container
+    h3(:style="isDarkMode ? { color: 'white' } : null") Reading List
+    .cards-container
+      Card(v-for="(card, index) in cards" :key="index" :card="card")
 </template>
 
 <style scoped>

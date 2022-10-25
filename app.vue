@@ -2,12 +2,11 @@
 const { isDarkMode } = useDarkMode();
 </script>
 
-<template>
-  <div :style="isDarkMode ? { backgroundColor: 'black' } : null">
-    <Nav />
-    <Heading />
-    <Cards />
-  </div>
+<template lang="pug">
+div(:style="isDarkMode ? { backgroundColor: 'black' } : null")
+  Nav
+  Heading
+  Cards
 </template>
 
 <style>
